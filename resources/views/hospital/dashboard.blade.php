@@ -1,6 +1,5 @@
 @include('layouts.header')
-<<<<<<< HEAD
-=======
+
 <div class="row invoice-card-row">
     <div class="col-xl-3 col-xxl-6 col-sm-6">
 
@@ -248,4 +247,3 @@
         </div>
     </div>
     @include('layouts.footer')
->>>>>>> c3ac7d2f8d26c51e5db22eb0227192b680e2c9cb
