@@ -15,16 +15,16 @@ return new class extends Migration
     {
         Schema::create('hospitals', function (Blueprint $table) {
             $table->id('hid');
-            $table->string('hospital_name');
-            $table->string('username');
-            $table->string('password');
-            $table->string('regno');
-            $table->string('address');
-            $table->string('pincode');
-            $table->string('contact');
-            $table->string('alter_no');
+            $table->string('hospital_name')->nullable();
+            $table->string('username')->nullable();
+            $table->string('password')->nullable();
+            $table->string('regno')->nullable();
+            $table->string('address')->nullable();
+            $table->string('pincode')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('alter_no')->nullable();
             // $table->enum('hospital_type',['PHC', 'CHC', 'SS', 'MS']);
-            $table->enum('ownership', ['govt', 'pvt', 'trust']);
+            $table->enum('ownership', ['govt', 'pvt', 'trust'])->nullable();
             $table->string('verified')->default(0);
             // // $table->string('bed_avail')->default(0); //0 = null , 1= available;
             // $table->enum('bed_type',['general','maternity','ICU','ICCU',"HCU"]);

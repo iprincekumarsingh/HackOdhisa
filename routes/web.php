@@ -28,7 +28,10 @@ Route::controller(AuthController::class)->group(function () {
 Route::get('/profile-update', [ProfileUpdate::class], 'update');
 
 Route::controller(HospitalAuthController::class)->group(function () {
+    Route::get('/hospital-login','login')->name('login');
     Route::get('/hospital/dashboard','home')->name('home.index');
     Route::get('hospital/add', 'index');
     Route::get('/hospital/verify', 'verify')->name('hospital.verify');
+
+
 });

@@ -9,7 +9,7 @@
                     @csrf
 
                     <span class="login100-form-title p-b-43">
-                        Login with Phone
+                        Authorised Person Only
                     </span>
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <input class="input100" type="text" name="phone_number">
