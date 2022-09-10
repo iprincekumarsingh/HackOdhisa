@@ -130,6 +130,7 @@
 				Made with <span class="heart"></span> by DexignLab
 			  </p>
 			</div> --}}
+<<<<<<< HEAD
         </div>
     </div>
     <!--**********************************
@@ -140,3 +141,13 @@
         <div class="container-fluid">
 
 
+=======
+		  </div>
+		</div>
+		<!--**********************************
+			  Sidebar end
+		  ***********************************-->
+          <div class="content-body">
+            <!-- row -->
+            <div class="container-fluid">
+>>>>>>> dev-homepage
