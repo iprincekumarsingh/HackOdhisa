@@ -1,4 +1,5 @@
 @include('layouts.header')
+<<<<<<< HEAD
 <div>
     <div class="card">
         <div class="card-header d-block d-sm-flex border-0">
@@ -48,4 +49,8 @@
         </div>
     </div>
 </div>
+=======
+
+
+>>>>>>> 3231793b5d473f7b4720422736aa3ab631083271
 @include('layouts.footer')
