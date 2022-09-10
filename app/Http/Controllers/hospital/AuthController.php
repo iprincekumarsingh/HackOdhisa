@@ -29,7 +29,11 @@ class AuthController extends Controller
     {
         return view('hospital.register');
     }
-
+    public function hVerify()
+    {
+        return view('auth.hospital-verify');
+        # code...
+    }
     protected function create(Request $request)
     {
         $data = $request->validate([
@@ -49,7 +53,7 @@ class AuthController extends Controller
             'body' => $message
         ]);
 
-        $check_user = User::where('phone_number', $request['phone_number'])->first();
+        $check_user = Hospitals::where('contact', $request['phone_number'])->first();
 
         if ($check_user == null) {
             Hospitals::create([
@@ -59,7 +63,7 @@ class AuthController extends Controller
 
             ]);
         } else {
-            User::where('phone_number', $request['phone_number'])
+            Hospitals::where('contact', $request['phone_number'])
                 ->update(
                     [
                         'code' => $rand
@@ -112,4 +116,26 @@ class AuthController extends Controller
     //         return back()->with(['error' => 'Hospital / Username alerady exist entered!']);
     //     }
     // }
+    protected function verify(Request $request)
+    {
+        // data coming from the form
+        $data = $request->validate([
+            'verification_code' => ['required', 'numeric'],
+            'phone_number' => ['required', 'string'],
+
+        ]);
+
+        $datap = Hospitals::where('contact', $request['phone_number'])
+            ->where('code', $request['verification_code'])->get();
+
+        if ($datap->count()) {
+            echo "OTP IS CORRECT";
+            session()->put('isLoggedIn', 1);
+            session()->put('phone', $request['phone_number']);
+            return redirect()->route('home.index')->with(['message' => 'Phone number verified']);
+        } else {
+            echo "OTP ERROR";
+            return back()->with(['phone_number' => $data['phone_number'], 'error' => 'Invalid verification code entered!']);
+        }
+    }
 }

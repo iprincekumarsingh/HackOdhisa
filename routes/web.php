@@ -29,14 +29,18 @@ Route::controller(AuthController::class)->group(function () {
 Route::get('/profile-update', [ProfileUpdate::class], 'update');
 
 Route::controller(HospitalAuthController::class)->group(function () {
-    Route::get('/hospital-login', 'login')->name('login');
-    Route::get('/hospital/dashboard', 'home')->name('home.index');
-    Route::get('hospital/add', 'index');
-    Route::get('/hospital/verify', 'verify')->name('hospital.verify');
+    Route::get('/h-login', 'login')->name('login');
+    Route::get('/hospital/dashboard', 'home')->name('home.index')->middleware('WebGuard');
+    Route::get('hospital/add', 'index')->middleware('WebGuard');
+    Route::get('/hospital/verify', 'hVerify')->name('hospital.verify');
+
+
+    Route::post('/h-login','create')->name('login');
+    Route::post('/h-verify','verify')->name('h.verify');
 });
 Route::controller(HospitalWeBController::class)->group(function () {
 
-    Route::get('/booking', 'booking')->name('hospital.booking');
-    Route::get('/bed-deatils', 'bed')->name('hospital.bed');
-    Route::get('account', 'account')->name('hospital.profile');
+    Route::get('/booking', 'booking')->name('hospital.booking')->middleware('WebGuard');
+    Route::get('/bed-deatils', 'bed')->name('hospital.bed')->middleware('WebGuard');
+    Route::get('account', 'account')->name('hospital.profile')->middleware('WebGuard');
 });
