@@ -1,22 +1,31 @@
 <?php
 
 use App\Http\Controllers\auth\AuthController;
+use App\Http\Controllers\hospital\AuthController as HospitalAuthController;
 use App\Http\Controllers\web\ProfileUpdate;
+use App\Http\Controllers\web\WebController;
 use Brick\Math\Exception\RoundingNecessaryException;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('auth.index');
-})->name('register');
+// Web Contrller
+Route::controller(WebController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::get('/home', 'home')->name('home');
+});
 
-Route::get('/verify', function () {
-    return view('auth.verify');
-})->name('verify');
+// user Auth Contrller
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/login', 'index')->name('register');
+    Route::get('/verify', 'verifyPage')->name('verify');
+    Route::post('/',  'create')->name('register');
+    Route::post('/verify', 'verify')->name('verify');
+});
 
-Route::get('/home', function () {
-    return view('web.home');
-})->name('home');
 Route::get('/profile-update', [ProfileUpdate::class], 'update');
-Route::post('/', [AuthController::class, 'create'])->name('register');
-Route::post('/verify', [AuthController::class, 'verify'])->name('verify');
-// Route::get
+
+Route::controller(HospitalAuthController::class)->group(function () {
+});
+Route::get('hospital', function () {
+    return view('auth.hospital');
+});

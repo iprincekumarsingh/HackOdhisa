@@ -11,6 +11,16 @@ use Twilio\Rest\Client;
 
 class AuthController extends Controller
 {
+
+    public function index()
+    {
+        return view('auth.index');
+    }
+    public function verifyPage()
+    {
+        return view('auth.verify');
+        # code...
+    }
     /**
      * Create a new user instance after a valid registration.
      *
