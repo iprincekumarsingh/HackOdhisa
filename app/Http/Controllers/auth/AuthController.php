@@ -21,6 +21,11 @@ class AuthController extends Controller
         return view('auth.verify');
         # code...
     }
+    public function nameUpdate()
+    {
+        return view('auth.form');
+        # code...
+    }
     /**
      * Create a new user instance after a valid registration.
      *
@@ -81,6 +86,9 @@ class AuthController extends Controller
             echo "OTP IS CORRECT";
             session()->put('isLoggedIn', 1);
             session()->put('phone', $request['phone_number']);
+            if ($datap[0]['name'] == null) {
+                return redirect()->route('update.name');
+            }
             return redirect()->route('home')->with(['message' => 'Phone number verified']);
         } else {
             echo "OTP ERROR";

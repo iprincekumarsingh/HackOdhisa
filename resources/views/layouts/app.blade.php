@@ -30,9 +30,17 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                        @if (session('isLoggedIn'))
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}">{{ __('Logout') }}</a>
+                        </li>
+                        @else
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
+                        @endif
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

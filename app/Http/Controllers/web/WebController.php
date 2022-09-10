@@ -17,4 +17,14 @@ class WebController extends Controller
     {
         return view('web.home');
     }
+    public function search(Request $search)
+    {
+        echo $search;
+    }
+    public function logout()
+    {
+        session()->flush();
+        return redirect()->route('home');
+        # code...
+    }
 }
