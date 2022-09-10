@@ -73,6 +73,7 @@ class AuthController extends Controller
             session()->put('phone', $request['phone_number']);
             return redirect()->route('home')->with(['message' => 'Phone number verified']);
         } else {
+            echo "OTP ERROR";
             return back()->with(['phone_number' => $data['phone_number'], 'error' => 'Invalid verification code entered!']);
         }
     }

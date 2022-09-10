@@ -4,7 +4,7 @@ use App\Http\Controllers\auth\AuthController;
 use Brick\Math\Exception\RoundingNecessaryException;
 use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
-    return view('auth.register');
+    return view('auth.index');
 })->name('register');
 
 Route::get('/verify', function () {
@@ -12,7 +12,7 @@ Route::get('/verify', function () {
 })->name('verify');
 
 Route::get('/home', function () {
-    return view('home');
+    return view('web.home');
 })->name('home');
 
 Route::post('/', [AuthController::class,'create'])->name('register');
