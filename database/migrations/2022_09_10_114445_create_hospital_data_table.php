@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('CHC')->nullable();
             $table->string('SS')->nullable();
             $table->string('MS')->nullable();
-            $table->string('')->nullable();
+            // $table->string('')->nullable();
             $table->timestamps();
         });
     }
