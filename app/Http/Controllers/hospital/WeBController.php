@@ -18,4 +18,8 @@ class WeBController extends Controller
         return view('hospital.profile');
         # code...
     }
+    public function bed()
+    {
+    return view('hospital.bed');
+    }
 }
