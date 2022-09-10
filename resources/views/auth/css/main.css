@@ -390,7 +390,12 @@ input.input100 {
 .input100:focus + .focus-input100 + .label-input100 {
   top: 14px;
   font-size: 13px;
+  
 }
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 .has-val {
   height: 48px !important;
@@ -617,4 +622,12 @@ input.input100 {
 .login100-form-social-item:hover {
   background: #333333;
   color: #fff;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
 }
