@@ -17,6 +17,7 @@ Route::controller(WebController::class)->group(function () {
 
 // user Auth Contrller
 Route::controller(AuthController::class)->group(function () {
+
     Route::get('/login', 'index')->name('register');
     Route::get('/verify', 'verifyPage')->name('verify');
     Route::post('/',  'create')->name('register');
@@ -27,6 +28,7 @@ Route::controller(AuthController::class)->group(function () {
 Route::get('/profile-update', [ProfileUpdate::class], 'update');
 
 Route::controller(HospitalAuthController::class)->group(function () {
+    Route::get('/hospital/dashboard','home')->name('home.index');
     Route::get('hospital/add', 'index');
     Route::get('/hospital/verify', 'verify')->name('hospital.verify');
 });

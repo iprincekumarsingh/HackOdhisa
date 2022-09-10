@@ -20,6 +20,11 @@ class AuthController extends Controller
         return view('auth.hospital-verify');
         # code...
     }
+    public function home()
+    {
+        # code...
+        return view('hospital.dashboard');
+    }
     public function create(Request $request)
     {
 
