@@ -55,8 +55,10 @@
                                
                                 <div class="mb-3 row">
                                     <div class="col-lg-8 ms-auto">
+                                        
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -65,6 +67,8 @@
             </div>
         </div>
     </div>
+    
+    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_KGbeQ6rW0xxYGR" async> </script> </form>
     
     <!--Bill update finish....................................................................-->
 @include('layouts.footer')
