@@ -3,7 +3,7 @@
     <div class="card">
         <div class="card-header d-block d-sm-flex border-0">
             <div class="me-3">
-                <h4 class="card-title mb-2">Patients Registered</h4>
+                <h4 class="card-title mb-2">Hospital Registration</h4>
                 <span class="fs-12"></span>
             </div>
 
@@ -29,8 +29,8 @@
                                 </td>
                                 <td>
                                     <h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);"
-                                            class="text-black">Patient Name</a></h6>
-                                    <span class="fs-14">+917376647937</span>
+                                            class="text-black">Hospital Name</a></h6>
+                                    <span class="fs-14">Address</span>
                                 </td>
                                 <td>
                                     <h6 class="fs-16 text-black font-w600 mb-0">Bed Required</h6>
