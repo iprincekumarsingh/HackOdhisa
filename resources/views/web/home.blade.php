@@ -175,27 +175,16 @@
       <div
         class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
 
-        <div class="flex flex-col sm:flex-row gap-2 items-center justify-center mx-auto">
+        <form method="" class="flex flex-col sm:flex-row gap-2 items-center justify-center mx-auto">
           <div class="relative flex flex-col">
             <label for="PinCode" class="leading-7 text-2xl text-gray-600 text-center sm:text-left">By PinCode</label>
             <input type="Number" id="full-name" name="full-name"
               class="bg-gray-100 bg-opacity-50 rounded  text-base text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
-          <button
-            class="relative inline-flex self-end items-center mx-auto px-8 py-2.5 btn-primary overflow-hidden text-white rounded group focus:outline-none focus:ring"
-            href="/download">
-            <span class="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </span>
-            <span class="text-sm font-medium transition-all group-hover:mr-4">
-              Search
-            </span>
+          <button type="submit" class="self-end inline-block px-6 py-2.5 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 focus:outline-none focus:ring" href="#">
+            Search
           </button>
-        </div>
+        </form>
 
       </div>
       <div class="my-5">
