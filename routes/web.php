@@ -54,4 +54,5 @@ Route::controller(HospitalWeBController::class)->group(function () {
     Route::get('account', 'account')->name('hospital.profile')->middleware('WebGuard');
 
     Route::post('bedupdate', 'bedupdate')->name('bedupdate');
+    Route::post('account', 'accountupdate')->name('hos.update.profile');
 });

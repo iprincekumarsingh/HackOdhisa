@@ -17,44 +17,43 @@ class WeBController extends Controller
     }
     public function account()
     {
+        $data = Hospitals::where('hid', session('hid'))->get();
 
-        return view('hospital.profile');
+        return view('hospital.profile', compact('data'));
         # code...
     }
     public function bed()
     {
-        $data = HospitalData::where('hid',session('hid'))->get();
-        return view('hospital.bed',compact('data'));
+        $data = HospitalData::where('hid', session('hid'))->get();
+        return view('hospital.bed', compact('data'));
     }
 
     public function accountUpdate(Request $request)
     {
 
-        $data = $request->validate([
-            'hospital_name' => $request['hospital_name'],
-            'username' => $request['username'],
-            'password' => $request['password'],
-            'address' => $request['address'],
-            'pincode' => $request['pincode'],
-            'contact' => $request['contact'],
-            'alter_no' => $request['alter_no'],
-            'ownership' => $request['ownership'],
+        // $data = $request->validate([
 
-        ]);
-        Hospitals::where('contact', $request['phone_number'])
+        //     'hospital_name' => ['required'],
+        //     'address' => ['required'],
+        //     'pincode' => ['required'],
+        //     'contact' => ['required'],
+        //     'alter_no' => ['required'],
+        //     'ownership' => ['required']
+        // ]);
+        Hospitals::where('hid', session('hid'))
             ->update(
                 [
-                    'hospital_name' => ['required'],
-                    'username' => ['required'],
-                    'password' => ['required'],
-                    'address' => ['required'],
-                    'pincode' => ['required'],
-                    'contact' => ['required'],
-                    'alter_no' => ['required'],
-                    'ownership' => ['required']
+                    'hospital_name' => $request['hospital_name'],
+                    'address' => $request['address'],
+                    'pincode' => $request['pincode'],
+                    'contact' => $request['contact'],
+                    'alter_no' => $request['alter_no'],
+                    'ownership' => $request['ownership'],
 
                 ]
             );
+        return back();
+        // echo $data[0]['hospital_name']
     }
     public function bedupdate(Request $request)
     {
@@ -74,8 +73,8 @@ class WeBController extends Controller
                 'abnega' => $request['abnega'],
                 'opos' => $request['opos'],
                 'onegative' => $request['onegative'],
-                'hid'=>$id
+                'hid' => $id
             ]);
-            return back();
+        return back();
     }
 }

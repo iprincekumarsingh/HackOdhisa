@@ -80,11 +80,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-<<<<<<< HEAD
                                         <input value={{$datas['bpos']}} name="bpos" type="number" class="form-control" id="validationCustom06" placeholder="Enter Number of Beds Available" required>
-=======
-                                        <input type="number" class="form-control" id="validationCustom06" placeholder="Enter Units Available">
->>>>>>> 0839e00d4061c40d988ef0c9411643b30a4fd1a2
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>

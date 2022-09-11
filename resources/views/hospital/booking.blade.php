@@ -37,7 +37,7 @@
                                     <span class="fs-14">ICCU</span>
                                 </td>
                                 <td><span class="fs-16 text-black font-w600">Blood Group: AB+</span>
-                                    
+
                                 </td>
                                 <td><span class="text-success fs-16 font-w500 text-end d-block">Registration Completed</span></td>
                             </tr>
@@ -51,8 +51,4 @@
     </div>
 </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 437ed4f488b29edc9ceac23767abb885d575394a
 @include('layouts.footer')
