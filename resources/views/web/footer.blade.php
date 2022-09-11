@@ -47,15 +47,6 @@ Scripts
 <script src="{{url('admin/js/custom.min.js')}}"></script>
 <script src="{{url('admin/js/dlabnav-init.js')}}"></script>
 
-
-<script>
-  jQuery(document).ready(function() {
-    setTimeout(function() {
-      dezSettingsOptions.version = 'dark';
-      new dezSettings(dezSettingsOptions);
-    }, 500)
-  });
-</script>
 </body>
 
 </html>
