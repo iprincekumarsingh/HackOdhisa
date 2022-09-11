@@ -4,7 +4,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form  action="{{route('verify')}}" method="post" class="login100-form validate-form">
+				<form  action="{{route('h.verify')}}" method="post" class="login100-form validate-form">
                     @csrf
 					<br>
 					<span class="login10-form-title p-b-10">

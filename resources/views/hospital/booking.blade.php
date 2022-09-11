@@ -6,7 +6,7 @@
                 <h4 class="card-title mb-2">Patients Registered</h4>
                 <span class="fs-12"></span>
             </div>
-           
+
         </div>
         <div class="card-body tab-content p-0">
             <div class="tab-pane active show fade" id="monthly" role="tabpanel">
@@ -42,7 +42,7 @@
                                 <td><span class="text-success fs-16 font-w500 text-end d-block">Registration Completed</span></td>
                             </tr>
                             <tr>
-                               
+
                         </tbody>
                     </table>
                 </div>
@@ -51,4 +51,8 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 437ed4f488b29edc9ceac23767abb885d575394a
 @include('layouts.footer')

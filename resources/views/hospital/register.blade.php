@@ -5,7 +5,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" action="{{route('register')}}" method="POST">
+                <form class="login100-form validate-form" action="{{route('login')}}" method="POST">
                     @csrf
 
                     <span class="login100-form-title p-b-43">
@@ -23,18 +23,7 @@
                         </button>
                     </div>
                     <br>
-
                     <br>
-
-
-
-
-
-
-
-
-
-
                 </form>
 
                 <div class="login100-more" style="background-image: url('images/Untitled\ \(9\).png');">
