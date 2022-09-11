@@ -27,6 +27,19 @@ class WeBController extends Controller
         $data = HospitalData::where('hid', session('hid'))->get();
         return view('hospital.bed', compact('data'));
     }
+    public function profile()
+    {
+        return view('web.profile');
+        # code...
+    }
+    public function previousBookib()
+    {
+        return view('web.previousboking');
+    }
+    public  function book_hospital()
+    {
+        return view('web.book');
+    }
 
     public function accountUpdate(Request $request)
     {

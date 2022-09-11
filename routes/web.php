@@ -12,17 +12,21 @@ use Illuminate\Support\Facades\Route;
 Route::controller(WebController::class)->group(function () {
     Route::get('/', 'index')->name('web');
     Route::get('/home', 'home')->name('home');
-    Route::get('/search', 'search');
     Route::get('/logout', 'logout')->name('logout');
 
     Route::get('/profile', 'profile')->name('profile');
     Route::get('/previous-booking', 'previousBookib')->name('previous.bookib');
-    Route::get('/book', 'book-hospital')->name('book.user.hospital');
+    Route::get('/book', 'book_hospital')->name('book.user.hospital');
 
 
-    Route::get('/search', 'searhc')->name('route');
     Route::post('/book-hospital', 'bookHostpital')->name('book.hospital');
     Route::post('/profile-upadte', 'profile-update')->name('profile.update');
+
+
+    // search function
+
+
+    Route::get('/search', 'search');
 });
 
 // user Auth Contrller
@@ -33,6 +37,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/',  'create')->name('register');
     Route::post('/verify', 'verify')->name('verify');
     Route::get('/profile/next-step', 'nameUpdate')->name('update.name');
+    Route::post('/profile/next-step', 'nameUpdate')->name('update.name');
 });
 
 Route::get('/profile-update', [ProfileUpdate::class], 'update');
