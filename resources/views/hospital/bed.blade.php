@@ -76,7 +76,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom06" placeholder="Enter Number of Beds Available" required>
+                                        <input type="number" class="form-control" id="validationCustom06" placeholder="Enter Units Available">
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
