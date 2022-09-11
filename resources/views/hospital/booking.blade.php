@@ -29,14 +29,16 @@
                                 </td>
                                 <td>
                                     <h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);"
-                                            class="text-black">XYZ Store ID</a></h6>
-                                    <span class="fs-14">Cashback</span>
+                                            class="text-black">Patient Name</a></h6>
+                                    <span class="fs-14">+917376647937</span>
                                 </td>
                                 <td>
-                                    <h6 class="fs-16 text-black font-w600 mb-0">June 4, 2020</h6>
-                                    <span class="fs-14">05:34:45 AM</span>
+                                    <h6 class="fs-16 text-black font-w600 mb-0">Bed Required</h6>
+                                    <span class="fs-14">ICCU</span>
                                 </td>
-                                <td><span class="fs-16 text-black font-w600">+$5,553</span></td>
+                                <td><span class="fs-16 text-black font-w600">Blood Group: AB+</span>
+                                    
+                                </td>
                                 <td><span class="text-success fs-16 font-w500 text-end d-block">Registration Completed</span></td>
                             </tr>
                             <tr>
@@ -49,5 +51,8 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 437ed4f488b29edc9ceac23767abb885d575394a
 @include('layouts.footer')

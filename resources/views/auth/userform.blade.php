@@ -162,7 +162,7 @@
       width: 150px;
       padding: 10px;
       border: none;
-      border-radius: 5px; 
+      border-radius: 5px;
       background: #6675df;
       font-size: 16px;
       color: #fff;
@@ -190,15 +190,15 @@
     <div class="testbox">
       <form action="/">
         <div class="banner">
-          
+
           <h1>Update Your Profile</h1>
         </div>
-       
+
         <div class="item">
           <p>Name</p>
           <div class="name-item">
             <input type="text" name="name" placeholder="Enter Full Name" />
-            
+
           </div>
         </div>
 
@@ -212,7 +212,7 @@
           <p>Enter Your 12 digit number</p>
           <input type="email" name="email"/>
          </div>
-        
+
         <div class="question">
           <p>Gender</p>
           <div class="question-answer">
@@ -226,7 +226,7 @@
             </div>
           </div>
         </div>
-          
+
         <div class="item">
           <p>Address</p>
           <input type="text" name="name" placeholder="Street address" required/>
@@ -238,7 +238,7 @@
             <select required>
               <option value="">Country</option>
               <option value="1">India</option>
-              
+
             </select>
           </div>
         </div>
@@ -256,7 +256,7 @@
             <option value="2">O-</option>
           </select>
         </div>
-        
+
         <div class="btn-block">
           <button type="submit" href="/">Submit</button>
         </div>
