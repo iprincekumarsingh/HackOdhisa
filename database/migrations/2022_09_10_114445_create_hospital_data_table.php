@@ -14,11 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('hospital_data', function (Blueprint $table) {
-            $table->id('hid');
-            $table->string('PHC')->nullable();
-            $table->string('CHC')->nullable();
-            $table->string('SS')->nullable();
-            $table->string('MS')->nullable();
+            $table->id('hdata');
+            $table->string('g_bed');
+            $table->string('icu');
+            $table->string('iccu');
+            $table->string('mater');
+            $table->string('apos');
+            $table->string('bpos');
+            $table->string('anega');
+            $table->string('bnega');
+            $table->string('abposi');
+            $table->string('abnega');
+            $table->string('opos');
+            $table->string('hid');
+            // $table->string('contact');
+            $table->string('onegative');
             // $table->string('')->nullable();
             $table->timestamps();
         });

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-@include('layouts.header')
-@include('layouts.footer')
-=======
+
 @include('web.header')
 
 <!--*******************
@@ -229,4 +226,3 @@
 
 
 @include('web.footer')
->>>>>>> dev-homepage

@@ -105,9 +105,12 @@
         <div class="dlabnav-scroll">
             <ul class="metismenu" id="menu">
 
-                <li>
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-025-dashboard"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
 
-                    {{-- <ul aria-expanded="true"> --}}
+                    <ul aria-expanded="true">
                         <li><a href="index.html"></a></li>
                         <li><a href="{{route('home.index')}}">Dashboard</a></li>
                         <li><a href="{{route('hospital.booking')}}">Booking`s</a></li>
@@ -130,7 +133,6 @@
 				Made with <span class="heart"></span> by DexignLab
 			  </p>
 			</div> --}}
-<<<<<<< HEAD
         </div>
     </div>
     <!--**********************************
@@ -141,13 +143,3 @@
         <div class="container-fluid">
 
 
-=======
-		  </div>
-		</div>
-		<!--**********************************
-			  Sidebar end
-		  ***********************************-->
-          <div class="content-body">
-            <!-- row -->
-            <div class="container-fluid">
->>>>>>> dev-homepage

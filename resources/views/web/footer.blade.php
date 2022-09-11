@@ -49,12 +49,12 @@ Scripts
 
 
 <script>
-  jQuery(document).ready(function() {
-    setTimeout(function() {
-      dezSettingsOptions.version = 'dark';
-      new dezSettings(dezSettingsOptions);
-    }, 500)
-  });
+//   jQuery(document).ready(function() {
+//     setTimeout(function() {
+//       dezSettingsOptions.version = 'dark';
+//       new dezSettings(dezSettingsOptions);
+//     }, 500)
+//   });
 </script>
 </body>
 

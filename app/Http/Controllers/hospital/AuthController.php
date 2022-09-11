@@ -127,11 +127,12 @@ class AuthController extends Controller
 
         $datap = Hospitals::where('contact', $request['phone_number'])
             ->where('code', $request['verification_code'])->get();
-
+        $id=$datap[0]['hid'];
         if ($datap->count()) {
             echo "OTP IS CORRECT";
             session()->put('isLoggedIn', 1);
             session()->put('phone', $request['phone_number']);
+            session()->put('hid',$id);
             return redirect()->route('home.index')->with(['message' => 'Phone number verified']);
         } else {
             echo "OTP ERROR";
