@@ -23,7 +23,8 @@ class WeBController extends Controller
     }
     public function bed()
     {
-        return view('hospital.bed');
+        $data = HospitalData::where('hid',session('hid'))->get();
+        return view('hospital.bed',compact('data'));
     }
 
     public function accountUpdate(Request $request)
