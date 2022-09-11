@@ -10,15 +10,19 @@
             </div>
             <div class="card-body">
                 <div class="form-validation">
-                    <form class="needs-validation" novalidate >
+                    <form method="POST" action="{{route('bedupdate')}}" class="needs-validation" novalidate >
+                        @csrf
+                        @foreach ($data as $datas )
+
+
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="mb-3 row">
-                                    <label class="col-lg-4 col-form-label" for="validationCustom01">General Ward 
+                                    <label class="col-lg-4 col-form-label" for="validationCustom01">General Ward
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom01"  placeholder="Enter Number of Available Beds" >
+                                        <input name="g_bed" type="number" value="{{$datas['g_bed']}}" class="form-control" id="validationCustom01"  placeholder="Enter Number of Available Beds" >
                                         <div class="invalid-feedback">
                                             Invalid Bed Details
                                         </div>
@@ -29,7 +33,7 @@
                                             class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom02"  placeholder="Enter Number of Available Beds" >
+                                        <input value="{{$datas['icu']}}" name="icu" type="number" class="form-control" id="validationCustom02"  placeholder="Enter Number of Available Beds" >
                                         <div class="invalid-feedback">
                                             Invalid Bed Details
                                         </div>
@@ -40,7 +44,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom03" placeholder="Enter Number of Available Beds" >
+                                        <input value={{$datas['iccu']}} name="iccu" type="number" class="form-control" id="validationCustom03" placeholder="Enter Number of Available Beds" >
                                         <div class="invalid-feedback">
                                             Invalid Bed Details
                                         </div>
@@ -51,13 +55,13 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom03" placeholder="Enter Number of Available Beds" >
+                                        <input value="{{$datas['mater']}}" name="mater" type="number" class="form-control" id="validationCustom03" placeholder="Enter Number of Available Beds" >
                                         <div class="invalid-feedback">
                                             Invalid Bed Details
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                             <div class="col-xl-6">
                                 <div class="mb-3 row">
@@ -65,7 +69,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom06" placeholder="Enter Units Available" >
+                                        <input value={{$datas['apos']}} name="apos" type="number" class="form-control" id="validationCustom06" placeholder="Enter Units Available" >
                                         <div class="invalid-feedback">
                                             Invalid Bed Deatils
                                         </div>
@@ -76,7 +80,11 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom06" placeholder="Enter Number of Beds Available" required>
+<<<<<<< HEAD
+                                        <input value={{$datas['bpos']}} name="bpos" type="number" class="form-control" id="validationCustom06" placeholder="Enter Number of Beds Available" required>
+=======
+                                        <input type="number" class="form-control" id="validationCustom06" placeholder="Enter Units Available">
+>>>>>>> 0839e00d4061c40d988ef0c9411643b30a4fd1a2
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
@@ -87,7 +95,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available">
+                                        <input value={{$datas['anega']}} name="anega" type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available">
                                         <div class="invalid-feedback">
                                            Invalid Units
                                         </div>
@@ -98,7 +106,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
+                                        <input value="{{$datas['bnega']}}" name="bnega" type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
@@ -109,7 +117,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
+                                        <input value="{{$datas['abposi']}}" name="abposi" type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
@@ -119,7 +127,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
+                                        <input value="{{$datas['abnega']}}" name="abnega" type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
@@ -129,7 +137,7 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
+                                        <input value="{{$datas['opos']}}" name="opos" type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
@@ -139,13 +147,13 @@
                                         <span class="text-danger"></span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
+                                        <input value="{{$datas['onegative']}}" name="onegative" type="number" class="form-control" id="validationCustom08" placeholder="Enter Units Available" >
                                         <div class="invalid-feedback">
                                             Invalid Units
                                         </div>
                                     </div>
                                 </div>
-                               
+                                @endforeach
                                 <div class="mb-3 row">
                                     <div class="col-lg-8 ms-auto">
                                         <button type="submit" class="btn btn-primary">Submit</button>
