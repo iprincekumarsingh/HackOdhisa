@@ -15,6 +15,15 @@ composer install
 php artisan migrate
 ```
 
+## Screenshot
+
+<div class="">
+<img src="./public/images/screenshots/Screenshot 2022-09-11 190601.png" alt="">
+<img src="./public/images/screenshots/Screenshot 2022-09-11 190658.png" alt="">
+<img src="./public/images/screenshots/Screenshot 2022-09-11 190817.png" alt="">
+<img src="./public/images/screenshots/Screenshot 2022-09-11 190917.png" alt="">
+</div>
+
 ## Built with
 
 - PHP
