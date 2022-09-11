@@ -24,4 +24,11 @@
 <!-- Style css -->
 <link href="{{url('admin/css/style.css')}}" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<style>
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+</style>
 </head>

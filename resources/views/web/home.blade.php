@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-@include('layouts.header')
-@include('layouts.footer')
-=======
 @include('web.header')
 
 <!--*******************
@@ -34,13 +30,15 @@
           Header start
       ***********************************-->
   <div class="header" style="padding: 1rem;">
-    <div class="header-content">
+    <div class="header-content" style="padding-inline: 2rem;">
       <nav class="navbar navbar-expand">
         <div class="collapse navbar-collapse justify-content-between">
-          <div class="header-left">
-            <div class="text-4xl text-white">
-              HOME
-            </div>
+          <div class="">
+            <!-- LOGO -->
+            <a href="#" class="flex">
+              <img class="md:w-3/6 w-5/6 object-cover object-center rounded" alt="logo"
+                src="{{url('/images/relief-logo.png')}}">
+            </a>
           </div>
           <ul class="navbar-nav header-right">
             <!-- notifiaction icon -->
@@ -145,27 +143,21 @@
       ***********************************-->
 
   <!-- HERO SECTION -->
-  <div class="py-5">
+  <div class="">
     <!-- row -->
     <div class="container-fluid">
 
       <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div class="container mx-auto flex px-5 pt-24 pb-8 items-center justify-center flex-col">
           <img class="md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
             src="{{url('/images/hospital-service-concept-flat-illustration.png')}}">
           <div class="text-center lg:w-2/3 w-full">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth tattooed
-              vexillologist</h1>
-            <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled.
-              Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde
-              chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo booth af fingerstache
-              pitchfork.</p>
-            <div class="flex justify-center">
-              <button
-                class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-              <button
-                class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
-            </div>
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 capitalize">
+              Check and Book hospital beds
+            </h1>
+            <p class="mb-8 leading-relaxed text-base">
+              Simplest way to book nearby hospital beds from a single application!!
+            </p>
           </div>
         </div>
       </section>
@@ -174,41 +166,95 @@
 
   <!-- SEARCH FOR HOSPITAL -->
   <section class="text-gray-600 body-font">
-    <div class="container px-5 pb-60 mx-auto">
+    <div class="container px-5 pb-10 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 capitalize">
           Search for your nearest hospital
         </h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">
-          Fast as duck
-        </p>
       </div>
-
       <div
         class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
 
-        <div class="relative flex flex-col">
-          <label for="PinCode" class="leading-7 text-2xl text-gray-600">By PinCode</label>
-          <input type="Number" id="full-name" name="full-name"
-            class="bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        <div class="flex flex-col sm:flex-row gap-2 items-center justify-center mx-auto">
+          <div class="relative flex flex-col">
+            <label for="PinCode" class="leading-7 text-2xl text-gray-600 text-center sm:text-left">By PinCode</label>
+            <input type="Number" id="full-name" name="full-name"
+              class="bg-gray-100 bg-opacity-50 rounded  text-base text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <button
+            class="relative inline-flex self-end items-center mx-auto px-8 py-2.5 btn-primary overflow-hidden text-white rounded group focus:outline-none focus:ring"
+            href="/download">
+            <span class="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </span>
+            <span class="text-sm font-medium transition-all group-hover:mr-4">
+              Search
+            </span>
+          </button>
         </div>
 
-        <button
-          class="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
-          href="/download">
-          <span class="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </span>
+      </div>
+      <div class="my-5">
+        <div>
+          <div class="card">
+            <div class="card-header d-block d-sm-flex border-0">
+              <div class="me-3">
+                <h4 class="card-title mb-2 border-b border-primary">List of Hospitals</h4>
+                <span class="fs-12"></span>
+              </div>
 
-          <span class="text-sm font-medium transition-all group-hover:mr-4">
-            Search
-          </span>
-        </button>
+            </div>
+            <div class="card-body tab-content p-0">
+              <div class="tab-pane active show fade" id="monthly" role="tabpanel">
+                <div class="table-responsive">
+                  <table class="table table-responsive-md card-table transactions-table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path
+                              d="M32 32c17.7 0 32 14.3 32 32V320H288V160c0-17.7 14.3-32 32-32H544c53 0 96 43 96 96V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V416H352 320 64v32c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32zM176 288c-44.2 0-80-35.8-80-80s35.8-80 80-80s80 35.8 80 80s-35.8 80-80 80z" />
+                          </svg>
+                        </td>
+                        <td>
+                          <h6 class="fs-16 font-w600 mb-0"><a href="javascript:void(0);" class="text-black">Ashwini
+                              Trauma Centre</a></h6>
+                          <span class="fs-14">Plot No 14, Sector 1 CDA, Cuttack – 753014</span>
+                        </td>
+                        <td>
+                          <h6 class="fs-16 text-black font-w600 mb-0">Beds Available</h6>
+                          <span class="fs-14">45</span>
+                        </td>
+                        <td>
+                          <h6 class="fs-16 text-black font-w600">Contact Details</h6>
+                          <span class="fs-14">954-383-5661</span>
+                        </td>
+                        <td>
+                          <button
+                            class="relative inline-block px-6 py-2.5 overflow-hidden border-1 border-primary group focus:outline-none focus:ring"
+                            href="/">
+                            <span
+                              class="absolute inset-x-0 top-0 h-[2px] transition-all btn-primary group-hover:h-full group-active:bg-primary"></span>
 
+                            <span
+                              class="relative text-sm font-bold text-[#5bcfc5] transition-colors group-hover:text-white">
+                              Book Bed(s)
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -218,15 +264,5 @@
       Main wrapper end
   ***********************************-->
 
-<script>
-  jQuery(document).ready(function () {
-    setTimeout(function () {
-      dezSettingsOptions.version = 'dark';
-      new dezSettings(dezSettingsOptions);
-    }, 500)
-  });
-</script>
-
 
 @include('web.footer')
->>>>>>> dev-homepage
