@@ -15,14 +15,14 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/search', 'search');
     Route::get('/logout', 'logout')->name('logout');
 
-    Route::get('/profile','profile')->name('profile');
-    Route::get('/book','book-hospital')->name('book.user.hospital');
+    Route::get('/profile', 'profile')->name('profile');
+    Route::get('/previous-booking', 'previousBookib')->name('previous.bookib');
+    Route::get('/book', 'book-hospital')->name('book.user.hospital');
 
 
-    Route::post('/search','searhc')->name('route');
-    Route::post('/book-hospital','bookHostpital')->name('book.hospital');
-    Route::post('/profile-upadte','profile-update')->name('profile.update');
-
+    Route::get('/search', 'searhc')->name('route');
+    Route::post('/book-hospital', 'bookHostpital')->name('book.hospital');
+    Route::post('/profile-upadte', 'profile-update')->name('profile.update');
 });
 
 // user Auth Contrller
@@ -44,8 +44,8 @@ Route::controller(HospitalAuthController::class)->group(function () {
     Route::get('/hospital/verify', 'hVerify')->name('hospital.verify');
 
 
-    Route::post('/h-login','create')->name('login');
-    Route::post('/h-verify','verify')->name('h.verify');
+    Route::post('/h-login', 'create')->name('login');
+    Route::post('/h-verify', 'verify')->name('h.verify');
 });
 Route::controller(HospitalWeBController::class)->group(function () {
 
@@ -53,5 +53,5 @@ Route::controller(HospitalWeBController::class)->group(function () {
     Route::get('/bed-deatils', 'bed')->name('hospital.bed')->middleware('WebGuard');
     Route::get('account', 'account')->name('hospital.profile')->middleware('WebGuard');
 
-    Route::post('bedupdate','bedupdate')->name('bedupdate');
+    Route::post('bedupdate', 'bedupdate')->name('bedupdate');
 });
