@@ -31,6 +31,19 @@ class WebController extends Controller
         }
         // echo $search;
     }
+    public function profile()
+    {
+        return view('web.profile');
+    }
+    public function book()
+    {
+        return view('web.book');
+    }
+    public function previousBookib()
+    {
+        return view('web.previousboking');
+        # code...
+    }
 
     public function logout()
     {

@@ -16,7 +16,7 @@ Route::controller(WebController::class)->group(function () {
 
     Route::get('/profile', 'profile')->name('profile');
     Route::get('/previous-booking', 'previousBookib')->name('previous.bookib');
-    Route::get('/book', 'book_hospital')->name('book.user.hospital');
+    Route::get('/book', 'book')->name('book.user.hospital');
 
 
     Route::post('/book-hospital', 'bookHostpital')->name('book.hospital');
