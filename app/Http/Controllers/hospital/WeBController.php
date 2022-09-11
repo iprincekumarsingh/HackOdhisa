@@ -18,6 +18,7 @@ class WeBController extends Controller
     public function account()
     {
         $data = Hospitals::where('hid', session('hid'))->get();
+        
 
         return view('hospital.profile', compact('data'));
         # code...
