@@ -14,10 +14,10 @@
 <meta name="format-detection" content="telephone=no">
 
 <!-- PAGE TITLE HERE -->
-<title>Dompet : Payment Admin Template</title>
+<title>Relief | Home</title>
 
 <!-- FAVICONS ICON -->
-<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="{{url('/images/relief-logo.png')}}" />
 
 <link href="{{url('admin//vendor/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="{{url('admin/vendor/nouislider/nouislider.min.css')}}">
