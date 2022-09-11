@@ -28,7 +28,7 @@ class AuthController extends Controller
     }
     public function nameupdate(Request $request)
     {
-        $data =  User::where
+        // $data =  User::where;
         # code...
     }
     /**
@@ -91,9 +91,9 @@ class AuthController extends Controller
             echo "OTP IS CORRECT";
             session()->put('isLoggedIn', 1);
             session()->put('phone', $request['phone_number']);
-            if ($datap[0]['name'] == null) {
-                return redirect()->route('update.name');
-            }
+            // if ($datap[0]['name'] == null) {
+            //     return redirect()->route('update.name');
+            // }
             return redirect()->route('home')->with(['message' => 'Phone number verified']);
         } else {
             echo "OTP ERROR";

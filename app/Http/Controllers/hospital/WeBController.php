@@ -18,7 +18,7 @@ class WeBController extends Controller
     public function account()
     {
         $data = Hospitals::where('hid', session('hid'))->get();
-        
+
 
         return view('hospital.profile', compact('data'));
         # code...
@@ -37,7 +37,7 @@ class WeBController extends Controller
     {
         return view('web.previousboking');
     }
-    public  function book_hospital()
+    public  function book_hospital($id)
     {
         return view('web.book');
     }

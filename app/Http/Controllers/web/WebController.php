@@ -5,6 +5,7 @@ namespace App\Http\Controllers\web;
 use App\Http\Controllers\Controller;
 use App\Models\Hospitals;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
 {
@@ -20,16 +21,20 @@ class WebController extends Controller
     }
     public function search(Request $search)
     {
+        // echo "<pre>";
+        $data = DB::table('hospitals')
+            ->join('hospital_data', 'hospitals.hid', '=', 'hospital_data.hid')
+            ->where('hospitals.pincode', $search['pincode'])
+            ->get();
 
-        $data = Hospitals::where('pincode', $search['pincode'])->get();
-
-
-        if ($data != null) {
-            // return redirect()->route('')
-        } else {
-            echo $data;
-        }
-        // echo $search;
+        // if ($data) {
+            // return view('web.search');
+            // return view('web.search')->with(['error' => 1]);
+        // } else {
+            return view('web.search', compact('data'));
+        // }
+        // echo "<pre>";
+        // echo $data[0]['hospital_name']
     }
     public function profile()
     {

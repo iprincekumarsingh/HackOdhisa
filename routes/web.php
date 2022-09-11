@@ -10,23 +10,23 @@ use Illuminate\Support\Facades\Route;
 
 // Web Contrller
 Route::controller(WebController::class)->group(function () {
-    Route::get('/', 'index')->name('web');
+    Route::get('/', 'home')->name('web');
     Route::get('/home', 'home')->name('home');
     Route::get('/logout', 'logout')->name('logout');
 
     Route::get('/profile', 'profile')->name('profile');
     Route::get('/previous-booking', 'previousBookib')->name('previous.bookib');
-    Route::get('/book', 'book')->name('book.user.hospital');
+    Route::get('/book/{id}', 'book')->name('book.user.hospital');
 
 
-    Route::post('/book-hospital', 'bookHostpital')->name('book.hospital');
+    Route::post('/book-hospital/{id}', 'bookHostpital')->name('book.hospital');
     Route::post('/profile-upadte', 'profile-update')->name('profile.update');
-
+    // Route::get('/book/{id}','bookbed')->name('book.bed');
 
     // search function
 
 
-    Route::get('/search', 'search');
+    Route::get('/search', 'search')->name('hospital.search');
 });
 
 // user Auth Contrller
@@ -38,13 +38,14 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/verify', 'verify')->name('verify');
     Route::get('/profile/next-step', 'nameUpdate')->name('update.name');
     Route::post('/profile/next-step', 'nameUpdate')->name('update.name');
+
 });
 
 Route::get('/profile-update', [ProfileUpdate::class], 'update');
 
 Route::controller(HospitalAuthController::class)->group(function () {
     Route::get('/h-login', 'login')->name('login');
-    Route::get('/hospital/dashboard', 'home')->name('home.index')->middleware('WebGuard');
+    Route::get('/hospital/dashboard', 'home')->name('home.index');
     Route::get('hospital/add', 'index')->middleware('WebGuard');
     Route::get('/hospital/verify', 'hVerify')->name('hospital.verify');
 
