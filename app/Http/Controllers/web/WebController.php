@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Hospitals;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -19,8 +20,10 @@ class WebController extends Controller
     }
     public function search(Request $search)
     {
-        echo $search;
+
+      
     }
+
     public function logout()
     {
         session()->flush();

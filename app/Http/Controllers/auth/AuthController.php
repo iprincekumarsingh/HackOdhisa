@@ -21,9 +21,14 @@ class AuthController extends Controller
         return view('auth.verify');
         # code...
     }
-    public function nameUpdate()
+    public function name()
     {
         return view('auth.form');
+        # code...
+    }
+    public function nameupdate(Request $request)
+    {
+        $data =  User::where
         # code...
     }
     /**
