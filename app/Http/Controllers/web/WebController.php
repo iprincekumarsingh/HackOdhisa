@@ -21,7 +21,15 @@ class WebController extends Controller
     public function search(Request $search)
     {
 
-      
+        $data = Hospitals::where('pincode', $search['pincode'])->get();
+
+
+        if ($data != null) {
+            // return redirect()->route('')
+        } else {
+            echo $data;
+        }
+        // echo $search;
     }
 
     public function logout()
